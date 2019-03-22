@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "face-api.js": "^0.18.0",
     "gatsby": "^2.2.5",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-manifest": "^2.0.24",
@@ -16,7 +17,13 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-dropzone": "^10.0.5",
     "react-helmet": "^5.2.0"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   },
   "devDependencies": {
     "prettier": "^1.16.4"
