@@ -1,10 +1,8 @@
 import React from "react"
-import {graphql} from 'gatsby'
 import * as faceapi from "face-api.js"
 import Dropzone from "react-dropzone"
-import data from '../../database/data'
 
-class IndexComplex extends React.Component {
+class IndexPage extends React.Component {
   state = {
     isLoading: true,
     isRusum: false,
@@ -56,11 +54,6 @@ class IndexComplex extends React.Component {
   }
 
   render() {
-    const imageArray = this.props.data.allFile.edges
-    // imageArray.forEach(image => 
-    //   // console.log(image.node.id)
-    //   data.push({id:image.node.id})
-    //   )
     return (
       <div>
         {this.state.isLoading ? (
@@ -111,13 +104,4 @@ class IndexComplex extends React.Component {
   }
 }
 
-export default IndexComplex
-
-export const imageQuery = graphql`
-query IndexComplex{allFile {
-    edges{node{
-      id
-      name
-    }}
-  }}
-`
+export default IndexPage
